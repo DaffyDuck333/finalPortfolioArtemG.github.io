@@ -1,0 +1,364 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  background-color: #ededed;
+  color: #1a1919;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  position: relative;
+  height: 120px;
+  background: url('./assets/header-image.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1919;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #1a1919;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 700px;
+  background: url('./assets/hero-image.jpg') no-repeat center center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.large-text {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.sub-text {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.hero-left-text,
+.hero-right-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25%;
+  color: #fff;
+}
+
+.hero-left-text {
+  left: 40px;
+}
+
+.hero-right-text {
+  right: 40px;
+}
+
+/* Main Section - Box Container */
+.main-section {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f8f8f8;
+}
+
+.box-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+}
+
+.box {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #d3d3d3; /* Grey color for all boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Remove underline for links */
+  color: #1a1919; /* Ensure text color consistency */
+}
+
+.box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 1rem;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Portfolio Pieces Title */
+.moodboard-title {
+  font-size: 4rem; /* Larger font size */
+  font-weight: bold; /* Consistent bold style */
+  text-align: center; /* Center align */
+  margin-bottom: 40px; /* Add spacing below the title */
+  color: #1a1919; /* Matches the design */
+  text-transform: uppercase; /* Optional: Uppercase styling */
+  letter-spacing: 2px; /* Slight letter spacing */
+}
+
+/* Portfolio Pieces Grid */
+.moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px; /* Space between images */
+  padding: 0 40px; /* Padding on the sides */
+}
+
+.moodboard-item img {
+  width: 100%; /* Full width within grid */
+  height: 250px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio, fill container */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth effects */
+}
+
+.moodboard-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+
+
+
+.moodboard-item img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 5px solid #fff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.5rem;
+
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1919;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  background-color: #ededed;
+  color: #1a1919;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  position: relative;
+  height: 120px;
+  background: url('./assets/header-image.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a1919;
+  position: relative;
+  z-index: 2;
+}
+
+/* Navigation Menu */
+.nav {
+  position: relative;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  z-index: 100;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #1a1919;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  background-color: #1a1919;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+}

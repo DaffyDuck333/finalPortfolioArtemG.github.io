@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARTEMG. | Portfolio Showcase</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <div class="header-overlay"></div>
+  <div class="logo">ARTEMG.</div>
+  <!-- Navigation Menu -->
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="resume.html">Resume</a></li> <!-- New Resume Link -->
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="large-text">ARTEMG.</h1>
+      <p class="sub-text">Portfolio</p>
+    </div>
+    <!-- Inspirational Text Left -->
+    <div class="hero-left-text">
+      <h2>About Me</h2>
+      <p>
+        I am an aspiring <strong>graphic designer</strong>, a passionate <strong>photographer</strong>, and an all-in-all <strong>creative</strong>.  
+        I find inspiration in the beauty of simplicity, the flow of colors, and the rhythm of light and shadow.  
+      </p>
+    </div>
+    <!-- Inspirational Text Right -->
+    <div class="hero-right-text">
+      <h2>My Vision</h2>
+      <p>
+        My work blends <strong>design</strong> and <strong>photography</strong> to tell stories that evoke emotions.  
+        Whether it’s crafting clean visuals or capturing fleeting moments, I aim to push creative boundaries.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <div class="box-container">
+      <!-- About Me Box -->
+      <a href="about.html" class="box about-box">
+        <h2>About Me</h2>
+        <p>Learn more about my journey as a creative.</p>
+      </a>
+      <!-- Portfolio Box -->
+      <a href="portfolio.html" class="box portfolio-box">
+        <h2>Portfolio</h2>
+        <p>Explore my projects and creative works.</p>
+      </a>
+      <!-- Contact Box -->
+      <a href="contact.html" class="box contact-box">
+        <h2>Contact</h2>
+        <p>Get in touch to collaborate or connect.</p>
+      </a>
+    </div>
+  </section>
+
+ <!-- Portfolio Pieces Section -->
+<section class="moodboard">
+  <div class="moodboard-title">Portfolio Pieces</div>
+  <div class="moodboard-grid">
+    <div class="moodboard-item">
+      <img src="./assets/moodboard1.png" alt="Portfolio Piece 1" class="portfolio-img">
+    </div>
+    <div class="moodboard-item">
+      <img src="./assets/moodboard2.png" alt="Portfolio Piece 2" class="portfolio-img">
+    </div>
+    <div class="moodboard-item">
+      <img src="./assets/moodboard3.png" alt="Portfolio Piece 3" class="portfolio-img">
+    </div>
+    <div class="moodboard-item">
+      <img src="./assets/moodboard4.png" alt="Portfolio Piece 4" class="portfolio-img">
+    </div>
+  </div>
+</section>
+
+
+  <!-- Lightbox Container -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-btn" id="close-btn">&times;</span>
+    <img id="lightbox-image" src="" alt="Enlarged Image">
+  </div>
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <ul class="footer-links">
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+    </ul>
+    <div class="footer-logo">ARTEMG.</div>
+  </div>
+</footer>
+
+  <!-- JavaScript for Lightbox -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeBtn = document.getElementById('close-btn');
+    const portfolioImages = document.querySelectorAll('.portfolio-img');
+
+    portfolioImages.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = image.src;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImage) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
